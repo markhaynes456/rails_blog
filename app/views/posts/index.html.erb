@@ -6,7 +6,7 @@
 	if @post_n == 1 %>
   	<div class="row">
 	<% end %>
-		 <div class="small-2 large-4 columns <%= @painter.paint %>">
+		 <div class="large-4 columns <%= @painter.paint %>">
 			<h2> <%= post.title %> </h2>
 			<p><%= post.slug[0..100]  %>...</p>
 			<%= link_to "View '#{post.title}'", post, :class => 'button' %>
