@@ -23,14 +23,16 @@ class PostsController < ApplicationController
 	end
 
 	def update
-
+		
 	end
 
 	def destroy
-
+		@post = Post.find_by(id:params['id'])
+		@post.destroy
 	end
 
 	def post_params
-		params.require(:post).permit(:title,:slug,:text)
+		params.require(:post).permit(:title,:slug,:text,:linked,:link)
 	end
+
 end

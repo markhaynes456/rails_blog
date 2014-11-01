@@ -9,7 +9,12 @@
 		 <div class="large-4 columns <%= @painter.paint %>">
 			<h2> <%= post.title %> </h2>
 			<p><%= post.slug[0..100]  %>...</p>
-			<%= link_to "View '#{post.title}'", post, :class => 'button' %>
+				
+			<% if post.linked == true %>
+				<%= link_to "View '#{post.title}'", post.link, :class => 'button small expand' %> 
+			<% else %>
+				<%= link_to "View '#{post.title}'", post, :class => 'button small expand' %>
+			<% end %>
 		</div>
 		<% if @post_n == 3
 			@post_n = 0 %>
