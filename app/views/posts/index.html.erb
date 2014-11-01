@@ -4,16 +4,16 @@
 	@posts.each do |post|
 	@post_n += 1
 	if @post_n == 1 %>
-  	<div class="row">
+  	<div class="row data-equalizer" >
 	<% end %>
 		 <div class="large-4 columns <%= @painter.paint %>">
 			<h2> <%= post.title %> </h2>
 			<p><%= post.slug[0..100]  %>...</p>
 				
 			<% if post.linked == true %>
-				<%= link_to "View '#{post.title}'", post.link, :class => 'button small expand' %> 
+				<%= link_to "View '#{post.title}'", post.link, :class => 'button small expand data-equalizer-watch' %> 
 			<% else %>
-				<%= link_to "View '#{post.title}'", post, :class => 'button small expand' %>
+				<%= link_to "View '#{post.title}'", post, :class => 'button small expand data-equalizer-watch' %>
 			<% end %>
 		</div>
 		<% if @post_n == 3
