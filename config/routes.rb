@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
 	resources :posts
 	resources :admin
+	resources :auth
 	root 'home#index'
 	get 'contact'  => 'home#contact'
 	# The priority is based upon order of creation: first created -> highest priority.

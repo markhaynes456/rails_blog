@@ -17,7 +17,7 @@
       <td><%= post.text %></td>
       <td><%= post.linked %></td>
 			<td><%= post.link %> </td>
-			<td><%= link_to("delete #{post.title}", {:controller => "posts", :action => "destroy", :id => post.id }, { :confirm => "are you sure?"}, :method => :delete) %>
+			<td><%= link_to("delete #{post.title}", {:controller => "posts", :action => "destroy", :id => post.id , :confirm => "are yo sure"}, :method => :delete) %>
     </tr>
 	<% end %>
   </tbody>

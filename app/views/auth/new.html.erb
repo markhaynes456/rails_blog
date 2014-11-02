@@ -1,0 +1,17 @@
+<%= form_tag auth_index_path do %>
+	
+	<div class= "field">
+		<%= label_tag :name %>
+		<%= text_field :name, params['name'] %>
+	</div>
+
+	<div class = "field">
+		<%= label_tag :pass %>
+		<%= text_field :pass, params['pass'] %>
+	</div>
+
+	<div class="actions">
+		<%= submit_tag('login')	%>	
+	</div>
+
+<% end %>
